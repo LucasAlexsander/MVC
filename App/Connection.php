@@ -4,27 +4,33 @@ namespace App;
 
 class Connection {
 
-    private $dbType = 'mysql';
-    private $dbName = 'mvc';
-    private $dbPath = 'localhost';
-    private $dbUser = 'root';
-    private $dbPass = '';
-
-
     public static function getDb () {
         try {
+            $dbType = 'mysql';
+            $dbName = 'mvc';
+            $dbPath = 'localhost';
+            $dbCharset = 'utf8';
+            $dbUser = 'root';
+            $dbPass = '';
 
-            $conn = new \PDO( // \ para indicar que a class fica na pasta raiz do php
-                "mysql:host=localhost;dbname=mvc;charset=utf8",
-                "root",
-                ""
+            $pdo = new \PDO( // \ para indicar que a class fica na pasta raiz do php
+                
+                "{$dbType}:dbname={$dbName};host={$dbPath};charset={$dbCharset}",
+                $dbUser,
+                $dbPass
             );
 
-            return $conn; //Precisamos returnar o $conn para efetuar a conexão
+            return $pdo; //Precisamos returnar o $conn para efetuar a conexão
 
         } catch (\PDOException $e) {
             //..Tratar de alguma forma..//
-            echo "Erro: " . $e;
+            echo "Erro não foi possível conectar ao banco de dados. <br>";
+            echo "<span>Mensagem Erro:</span> " . $e->getMessage() . ".<hr>";
+            exit;
+
+            echo '<pre>';
+            print_r($e);
+            echo '</pre>';
         }
     }
 }
