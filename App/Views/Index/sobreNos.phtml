@@ -4,7 +4,7 @@
 <?php 
 
 foreach ($this->view->dados as $item) {
-    echo $item . "<br>";
+    echo "Titulo: " . $item['titulo'] . "Descrição: " . $item['descricao'] . "<br>";
 }
 
 echo 'Chegamos ao IndexController e disparamos a action index';
