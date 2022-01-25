@@ -2,17 +2,5 @@
 <hr>
 
 <?php 
-    /* echo '<pre>';
-    print_r($this->view->dados);
-    echo '</pre>'; */
-
-    foreach($this->view->dados as $itens) {
-        echo 'Id: ' . $itens['id'];
-        echo ' | Descrição: ' . $itens['descricao'];
-        echo ' | Preço: ' . $itens['preco'];
-?>
-        <a href="../excluir">Excluir</a>
-<?php 
-        echo '<br>';    
-    }
+foreach($this->view->dados as $itens)
 ?>

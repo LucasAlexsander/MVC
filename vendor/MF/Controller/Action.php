@@ -13,9 +13,9 @@ abstract class Action {
     protected function render($view, $layout = '') {
         $this->view->page = $view;     
         
-        $phtml_layout = "../App/Views/".$layout.".phtml";
-        $html_layout ="../App/Views/".$layout.".php";
-        $php_layout = "../App/Views/".$layout.".html";
+        $phtml_layout = "../App/Views/Partials/".$layout.".phtml";
+        $html_layout ="../App/Views/Partials/".$layout.".php";
+        $php_layout = "../App/Views/Partials/".$layout.".html";
 
 
         //Procura páginas de Layout com o final HTML, PHP, PHTML

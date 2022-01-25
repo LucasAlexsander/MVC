@@ -5,7 +5,7 @@ namespace App;
 class Connection {
 
     public static function getDb () {
-        try {
+        try { // Alterar configurações para acessar o banco de dados
             $dbType = 'mysql';
             $dbName = 'mvc';
             $dbPath = 'localhost';

@@ -6,16 +6,13 @@ use MF\Init\Bootstrap;
 class Route extends Bootstrap {   
 
     protected function initRoutes() {
+
+        //Dados de exemplo
+
         $routes['home'] = array (
             'route' => '/', //Rota
             'controller' => 'indexController', //Controller usado para a rota
             'action' => 'index' //Ação
-        );
-
-        $routes['sobre_nos'] = array (
-            'route' => '/sobre_nos', 
-            'controller' => 'indexController',
-            'action' => 'sobreNos'
         );
 
         $routes['excluir'] = array (

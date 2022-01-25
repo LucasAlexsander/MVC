@@ -9,10 +9,12 @@
 
 </head>
 
-<body style="background: red;">
-    <h1>Layout2</h1>    
+<body>
+    <h1>Layout1</h1>    
+    <!-- Layout para pegar com base -->
 
-    <?= $this->content(); ?>
+    
+    <?= $this->content(); ?> <!--Importar páginas para dentro -->
 
 
 </body>
